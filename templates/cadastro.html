@@ -1,20 +1,28 @@
 <html>
     <head>
         <title>Cadastro</title>
+        <link rel="stylesheet" type="text/css" href="static/cadestilo.css">
     </head>
     
     <body>
-            <h1>Fazer cadastro</h1>
+        
+        <form method="post">
 
-        <form method="POST">
+    <div class="nomesenha">
 
-            <p>Nome: <input type="text" id="nome" name="nome"></p>
-            <p>Senha: <input type="password" id="senha" name="senha"></p>
+        <h1>Cadastro</h1>
 
-            <button type="submit" name="botao" value="cadastro">Cadastrar</button>
-            <button type="submit" name="botao" value="irlogin">Ir para login</button>
+        <p class="palavras">Nome:<input class="linha" type="text" id="nome" name="nome"></p>
 
-        </form>
-        <div>
+        <p class="palavras">DRE: <input class="linha" type="numer" id="senha" name="senha"></p>
+
+        <p class="palavras">Nome de usuário: <input class="linha" type="text" id="senha" name="senha"></p>
+
+        <p class="palavras">Senha: <input class="linha" type="password" id="senha" name="senha"></p>
+        
+        <p><button class="botoes" type="submit" name="botao" value="cadastrar">Cadastrar</button>
+        <button class="botoes" type="submit" name="botao" value="irlogin">Voltar para o login</button></p>
+    
+    <div>
     </body>
 </html>

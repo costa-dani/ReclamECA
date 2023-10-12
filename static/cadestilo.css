@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+body {
+    font-family: Courier;
+    background-image: linear-gradient(to bottom, #6b4572, rgb(0, 0, 0));
+}
+
+h1 {
+    font-family: "Helvetica";
+    color: #721d75;
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 15px;
+}
+
+.nomesenha {
+    background-color: #dddddd;
+    padding: 30px 40px;
+    width: 300px;
+    border: none;
+    color: #5e5a5e;
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+  
+.botoes {
+	background-color: rgb(181, 105, 169); 
+    color: #ffffff; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: Courier;
+    text-align: center;
+}
+
+.botoes:hover {
+  background-color: rgba(181, 105, 169, 0.8);
+}
+
+.palavras{
+	font-family: Georgia;
+    align-items: left;
+    font-size: 18px; 
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+}
+
+.linha{
+	border-bottom: 2px solid rgb(111, 109, 108);
+}
+
+.linha:hover {
+  border-bottom: 2px solid rgb(150, 147, 145);
+}
+
+input {
+    color: rgb(0, 0, 0);
+    border: none; 
+    background: transparent;
+    width: 100%;
+    outline: none;
+    margin: 10px 0px;
+	font-family: Helvetica, Arial, sans-serif;
+}
