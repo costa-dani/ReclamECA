@@ -12,15 +12,23 @@ h1 {
     margin: auto;
 }
 
+h3 {
+
+	font-family: "Helvetica";
+    color: #721d75e2;
+    text-align: left;
+
+}
+
 p {
     font-family: Georgia;
     font-size: 15px;
 }
 
-.nomesenha {
+.locrec {
     background-color: #dddddd;
-    padding: 30px 40px;
-    width: 400px;
+    padding: 10px 40px 30px 40px;
+    width: 300px;
     border: none;
     color: #5e5a5e;
     border-radius: 20px;
@@ -29,8 +37,17 @@ p {
     margin: auto;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
 }
+
+.titulos{
+
+	text-align: center;
+    color: #721d75;
+    margin: 40px;
+    padding: auto;
+
+}
   
-.botoes {
+.bot {
 	background-color: rgb(181, 105, 169); 
     color: #ffffff; 
     border: none; 
@@ -42,7 +59,7 @@ p {
     text-align: center;
 }
 
-.botoes:hover {
+.bot:hover {
   background-color: rgba(181, 105, 169, 0.8);
 }
 
@@ -64,11 +81,47 @@ p {
 }
 
 input {
-    color: rgb(0, 0, 0);
+    color: #595959;
     border: none; 
     background: transparent;
     width: 100%;
     outline: none;
     margin: 10px 0px;
 	font-family: Helvetica, Arial, sans-serif;
+}
+
+textarea {
+    background-color: rgb(185, 185, 185);
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    border: none;
+    padding: 10px;
+    resize: vertical; 
+    border-radius: 10px; 
+    scrollbar-width: thin;
+}
+
+::placeholder {
+    color: white;
+}
+
+select {
+    background-color: rgb(185, 185, 185);
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    border: none;
+    padding: 10px;
+    resize: vertical; 
+    border-radius: 10px; 
+}
+
+select:focus {
+    background-color: rgb(185, 185, 185, 0.8);
+}
+
+select:hover {
+	background-color: rgb(185, 185, 185, 0.8);
+    cursor: pointer; 
 }
