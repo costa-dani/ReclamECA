@@ -2,14 +2,14 @@
 
 body {
     font-family: Courier;
-    background-image: linear-gradient(to bottom, #6b4572, rgb(0, 0, 0));
+    background-color: #001962;
 }
 
 h1 {
     font-family: "Helvetica";
-    color: #721d75;
+    color: rgb(72, 155, 238);
     text-align: center;
-    margin: auto;
+    margin-bottom: auto auto 10px auto;
 }
 
 p {
@@ -31,19 +31,19 @@ p {
 }
   
 .botoes {
-	background-color: rgb(181, 105, 169); 
+	background-color: rgb(72, 155, 238); 
     color: #ffffff; 
     border: none; 
     padding: 10px 20px; 
     font-size: 15px; 
     border-radius: 5px; 
     cursor: pointer; 
-    font-family: Courier;
+    font-family: Helvetica;
     text-align: center;
 }
 
 .botoes:hover {
-  background-color: rgba(181, 105, 169, 0.8);
+  background-color: rgb(72, 155, 238, 0.8);
 }
 
 .palavras{
@@ -57,6 +57,7 @@ p {
 
 .linha{
 	border-bottom: 2px solid rgb(111, 109, 108);
+    padding: 8px;
 }
 
 .linha:hover {

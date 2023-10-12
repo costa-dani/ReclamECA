@@ -1,11 +1,9 @@
 from flask import Flask, render_template, request
-from werkzeug.utils import secure_filename
 
 app = Flask (__name__)
 app.secret_key = "trabalhinho"
 
 @app.route("/", methods = ["POST", "GET"])
-
 def hello():
    
    if request.method == 'POST':
@@ -18,12 +16,12 @@ def hello():
        
       elif escolha == "login":
 
+         #checar se o nome e senha estão no banco de dados
          return render_template("home.html")
 
    return render_template("login.html")
 
 @app.route("/signup", methods = ["POST", "GET"])
-
 def cadastro():
 
    if request.method == 'POST':
@@ -42,7 +40,6 @@ def cadastro():
    return render_template("cadastro.html")
 
 @app.route("/home", methods = ["POST", "GET"])
-
 def home():
 
    if request.method == 'POST':
@@ -64,7 +61,6 @@ def home():
    return render_template("home.html")
 
 @app.route("/reclamacao", methods = ["POST", "GET"])
-
 def reclamacao():
 
    if request.method == 'POST':
@@ -78,11 +74,18 @@ def reclamacao():
       elif escolha4 == "home":
 
          return render_template("home.html")
+       
+      elif escolha4 == "reclamar":
+
+         return render_template("reclamacao.html")
+      
+      elif escolha4 == "resolvido":
+
+         return render_template("resolvidas.html")
 
    return render_template("reclamacao.html")
 
 @app.route("/sucesso", methods = ["POST", "GET"])
-
 def sucesso():
 
    if request.method == 'POST':
