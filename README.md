@@ -12,7 +12,7 @@ TO DO:
 
 DOING:
 
-- html e css da pagina de "reclamação enviada com sucesso"
+- 
 
 DONE:
 
@@ -20,3 +20,4 @@ DONE:
 - css do login e cadastro
 - html da pagina de reclamação
 - css da pagina de reclamação
+- html e css da pagina de "reclamação enviada com sucesso"
