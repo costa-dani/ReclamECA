@@ -1,8 +1,7 @@
 from flask import Flask
-from main import views
-from ext import configuration
-
+from .ext import configuration
+from .main import views
 app = Flask(__name__)
 
-configuration.init_app(app)
 views.init_app(app)
+configuration.init_app(app)
