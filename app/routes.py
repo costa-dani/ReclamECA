@@ -102,4 +102,3 @@ def sucesso():
 
    return render_template("sucesso.html")
 
-app.run()
