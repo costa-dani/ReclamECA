@@ -4,10 +4,11 @@ body {
     font-family: Courier;
     background-color: #001962;}
 
-h1 {
+h2 {
     font-family: "Helvetica";
     color: rgb(72, 155, 238);
-    text-align: center;
+    text-align: left;
+    font-size: 18px;
 }
 
 p {
@@ -18,7 +19,7 @@ p {
 .barradetres {
     background-color: rgb(72, 155, 238);
     text-align: center;
-    color: #721d75;
+    color: rgb(72, 155, 238);
     margin: auto;
     padding: auto;
     border-radius: 50px;
@@ -54,4 +55,38 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.reclamacoes {
+	background-color: #dddddd;
+    padding: 10px;
+    width: auto;
+    border: none;
+    color: #5e5a5e;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+	text-align: left;
+    color: rgb(72, 155, 238);
+    margin: 10px 30px;
+    padding: 0px;
+    font-size: 18px;
+    font-family: Helvetica;
+}
+
+.hr {
+	width: auto;
+    height: 2px;
+}
+
+.texto{
+	font-family: Helvetica;
+	text-align: left;
+    color: #595959;
+    margin: 15px;
+    padding: 15px;
+    font-size: 15px;
 }
