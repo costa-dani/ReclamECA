@@ -22,41 +22,16 @@ p {
     font-size: 15px;
 }
 
-.barra-vertical {
-    width: 2px;
-    height: 40px;
-    background-color: rgba(94, 94, 94, 0.823);
-    display: inline-block; 
-    vertical-align: middle; 
-    margin: 0 10px;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.barradetres {
-    background-color: rgb(72, 155, 238);
-    text-align: center;
-    color: #721d75;
-    padding: 10px;
-    border-radius: 50px;
-    width: 430px;
-    margin: 25px auto auto auto;
-}
-
 .locrec {
     background-color: #dddddd;
-    padding: 10px 40px 30px 40px;
+    padding: 10px 40px;
     width: 300px;
     border: none;
     color: #5e5a5e;
     border-radius: 20px;
     display: flex; 
     flex-direction: column;
-    margin: 40px auto auto auto;
+    margin: 30px auto auto auto;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -66,23 +41,63 @@ p {
     color: rgb(72, 155, 238);
     margin: 40px;
     padding: auto;
-
 }
   
-.bot {
+.botreg {
 	background-color: rgb(72, 155, 238); 
     color: #ffffff; 
     border: none; 
     padding: 10px 20px; 
-    font-size: 15px; 
+    font-size: 18px; 
     border-radius: 5px; 
     cursor: pointer; 
     font-family: "Helvetica";
     text-align: center;
 }
 
-.bot:hover {
+.botreg:hover {
   background-color: rgb(72, 155, 238, 0.8);
+}
+
+.barradetres {
+    background-color: rgb(72, 155, 238);
+    text-align: center;
+    color: rgb(72, 155, 238);
+    margin: auto;
+    padding: auto;
+    border-radius: 50px;
+    width: 530px;
+}
+
+.bot {
+    background-color: rgb(72, 155, 238);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: Helvetica;
+    margin: 20px 10px;
+}
+
+.bot:hover {
+    background-color: rgb(72, 155, 238, 0.8);
+}
+
+.barra-vertical {
+    width: 2px;
+    height: 40px;
+    background-color: #333;
+    display: inline-block; /* Adicionado display: inline-block */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+    margin: 0 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .palavras{

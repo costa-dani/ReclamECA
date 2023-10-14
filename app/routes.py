@@ -9,6 +9,7 @@ def hello():
     if request.method == 'POST':
         escolha = request.form.get("botao")
         if escolha == "signup":
+            
             return redirect("/signup")
         
         elif escolha == "login":
