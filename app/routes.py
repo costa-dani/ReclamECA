@@ -3,7 +3,6 @@ from flask import Flask, render_template, request, redirect
 from app.models import *
 import pandas as pd
 
-
 app.secret_key = "trabalhinho"
 @app.route("/", methods = ["POST", "GET"])
 def hello():
@@ -11,6 +10,7 @@ def hello():
     if request.method == 'POST':
         escolha = request.form.get("botao")
         if escolha == "signup":
+
             return redirect("/signup")
         
         elif escolha == "login":
