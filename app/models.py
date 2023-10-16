@@ -35,16 +35,15 @@ class User:
 
 
 class Post:
-    def _init_(self, local, corpo, img=0):
+    def __init__(self, local, corpo):
         self.local = local
         self.corpo = corpo
-        self.img = img
 
     def cadastrar(self):
         c = init_client()
         db= c["databases"]
         post = db["post"]
-        p = {"local" : self.local, "corpo" : self.corpo, "img" : self.img}
+        p = {"local" : self.local, "corpo" : self.corpo}
         post.insert_one(p)
         c.close()
 

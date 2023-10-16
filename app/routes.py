@@ -82,6 +82,13 @@ def reclamacao():
         escolha4 = request.form.get("botao")
 
         if escolha4 == "reclamou":
+            andar = request.form.get("andar")
+            bloco = request.form.get("bloco")
+            onde = request.form.get("onde")
+            texto = request.form.get("corpo")
+            local = f"{onde} do Bloco {bloco} no {andar} andar"
+            p = Post(local = local, corpo = texto)
+            p.cadastrar()
 
             return redirect("/sucesso")
         
