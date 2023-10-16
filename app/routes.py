@@ -1,5 +1,7 @@
 from app import app
 from flask import Flask, render_template, request, redirect
+from app.models import *
+import pandas as pd
 
 
 app.secret_key = "trabalhinho"
@@ -12,9 +14,17 @@ def hello():
             return redirect("/signup")
         
         elif escolha == "login":
-
-            #checar se o nome e senha estão no banco de dados
-            return redirect("/home")
+            nome = request.form.get("nome")
+            dre = request.form.get("dre")
+            password = request.form.get("senha")
+            email = request.form.get("email")
+            u = User(dre=dre, password=password, nome = nome, email=email)
+            aut = u.autenticar()
+            if aut:
+                return redirect("/home")
+            else:
+                #enviar mensagem de dados errados
+                return redirect("/")
 
     return render_template("login.html")
 
@@ -26,13 +36,20 @@ def cadastro():
         escolha2 = request.form.get("botao")
 
         if escolha2 == "cadastrar":
+            nome = request.form.get("nome")
+            dre = request.form.get("dre")
+            email = request.form.get("email")
+            username = request.form.get("username")
+            password = request.form.get("senha")
 
-            #colocar o nome e senha no banco de dados
+            u = User(nome, dre, email, password)
+            u.cadastrar()
+           
             return redirect("/home")
     
         elif escolha2 == "irlogin":
             #
-            return render_template("login.html")
+            return redirect("/")
 
     return render_template("cadastro.html")
 
@@ -104,3 +121,4 @@ def sucesso():
 def resolvidas():
 
     return render_template("resolvidas.html")
+
