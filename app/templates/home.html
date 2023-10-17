@@ -17,14 +17,15 @@
                 <button class="bot" type="submit" name="botao" value="resolvido">Resolvido</button>
             </div>
         </div>
-
+        {% for i in post %}
         <div class="reclamacoes">
             <div class="titulo">
-                <h2> Sala do bloco H no 2 andar</h2>
+                <h2> {{i['local']}} </h2>
             </div>
             <hr>
-            <p class="texto">socorro eu to ficando maluca biruta totó</p>
+            <p class="texto">{{  i['corpo']  }}</p>
         </div>
+        {% endfor %}
 
         </form>
         </body>

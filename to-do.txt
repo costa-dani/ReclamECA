@@ -1,0 +1,12 @@
+To-do:
+
+- criar um alert com avisos pra ele nao escrever merda colosal tipo: " o bebedouro ta fraquinho"
+- alert quando erram o email ou a senha no login
+- colocar o nome na reclamacao, a ideia e deixar parecida com um feed
+- salvar a senha com criptografica no db
+- colocar botao de confirmar na reclamacao
+- ver oq faremos com o resolvido (trocar por minhas reclamacoes ?)
+- dentro de minhas reclamacoes ter um botao de apagar ou marcar como resolvido suas reclamacoes ?
+- ter a possibilidade de curtir ? 
+- criar uma tela inicial explicativa(ex: https://www.mongodb.com/pt-br)
+- colocar horario e data na postagem

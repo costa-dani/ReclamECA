@@ -16,11 +16,18 @@ def hello():
         elif escolha == "login":
             nome = request.form.get("nome")
             dre = request.form.get("dre")
-            password = request.form.get("senha")
+            password = request.form.get("password")
             email = request.form.get("email")
-            u = User(dre=dre, password=password, nome = nome, email=email)
-            aut = u.autenticar()
+            use = User(dre=dre, password=password, nome = nome, email=email)
+            aut = use.autenticar()
             if aut:
+                c = init_client()
+                db = c["databases"]
+                usuarios = db["usuarios"]
+                data = {'dre' : dre}
+                global u
+                u = usuarios.find_one(data)
+
                 return redirect("/home")
             else:
                 #enviar mensagem de dados errados
@@ -39,11 +46,10 @@ def cadastro():
             nome = request.form.get("nome")
             dre = request.form.get("dre")
             email = request.form.get("email")
-            username = request.form.get("username")
-            password = request.form.get("senha")
+            password = request.form.get("password")
 
-            u = User(nome, dre, email, password)
-            u.cadastrar()
+            use = User(nome, dre, email, password)
+            use.cadastrar()
            
             return redirect("/")
     
@@ -55,7 +61,7 @@ def cadastro():
 
 @app.route("/home", methods = ["POST", "GET"])
 def home():
-
+    l = mostrar()
     if request.method == 'POST':
 
         escolha3 = request.form.get("botao")
@@ -72,7 +78,7 @@ def home():
 
             return render_template("resolvidas.html")
 
-    return render_template("home.html")
+    return render_template("home.html", post = l)
 
 @app.route("/reclamacao", methods = ["POST", "GET"])
 def reclamacao():
@@ -87,9 +93,13 @@ def reclamacao():
             onde = request.form.get("onde")
             texto = request.form.get("corpo")
             local = f"{onde} do Bloco {bloco} no {andar} andar"
-            p = Post(local = local, corpo = texto)
+            nome = u['nome']
+            p = Post(local = local, corpo = texto, nome = nome)
             p.cadastrar()
-
+            #r  = request.form.get("")
+            #if r:
+            destino = achar_email(bloco)
+            enviar_email(destino = destino, lugar= local, corpo= texto, dre=u["dre"], emaili=u['email'], nome=u['nome'] )
             return redirect("/sucesso")
         
         elif escolha4 == "home":
@@ -128,4 +138,3 @@ def sucesso():
 def resolvidas():
 
     return render_template("resolvidas.html")
-
