@@ -45,10 +45,10 @@ def cadastro():
             u = User(nome, dre, email, password)
             u.cadastrar()
            
-            return redirect("/home")
+            return redirect("/")
     
         elif escolha2 == "irlogin":
-            #
+            
             return redirect("/")
 
     return render_template("cadastro.html")

@@ -8,23 +8,26 @@
         
         <form method="post">
 
-    <div class="nomesenha">
-
-        <h1>Cadastro</h1>
-
-        <p class="palavras">Nome:<input class="linha" type="text" id="nome" name="nome"></p>
-
-        <p class="palavras">DRE: <input class="linha" type="numer" id="senha" name="dre"></p>
-
-        <p class="palavras">PoliMail:<input class="linha" type="email" id="nome" name="email"></p>
-
-        <p class="palavras">Nome de usuário: <input class="linha" type="text" id="senha" name="username"></p>
-
-        <p class="palavras">Senha: <input class="linha" type="password" id="senha" name="senha"></p>
-        
-        <p><button class="botoes" type="submit" name="botao" value="cadastrar">Cadastrar</button>
-        <button class="botoes" type="submit" name="botao" value="irlogin">Voltar para o login</button></p>
-    
-    <div>
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">                    
+                        <h1>Criar conta</h1>
+                        <input type="text" placeholder="Nome" />
+                        <input type="number" placeholder="DRE" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Senha" />
+                        <button name="botao" value="cadastrar">Cadastrar</button>
+                    </form>
+                </div>
+                
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Bem-vindo(a) <br> de volta!</h1>
+                            <p>Já tem cadastro? <br>Faça login!</p>
+                            <button class="ghost" name="botao" value="irlogin">Login</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
     </body>
 </html>
