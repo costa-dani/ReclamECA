@@ -84,7 +84,7 @@ def mostrar(mr = 0, u = ''):
 
 def enviar_email(destino,nome, lugar, corpo, dre,emaili):  
     corpo_email = f"""
-    <p>Ola, Boa tarde</p>
+    <p>Olá, boa tarde!</p>
     <p>Mensagem direcionada pelo ReclamECA!!</p>
     <hr>
     <p>Problema relatado: </p>
@@ -121,4 +121,3 @@ def achar_email(bloco):
     }
 
     return dict[bloco]
-

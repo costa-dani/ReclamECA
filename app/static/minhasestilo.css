@@ -1,27 +1,33 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 header{
     width: 100%;
-    height: 60px;
-    background-color: #052a97 ;
+    height: 120px;
+    background-color: #E6EDFF ;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    color: white;
-}
-.titulo2{
-    display: flex;
-    width: 55%;
-    right: 20px;
+    color: #333;
+    font-family: "Montserrat";
 }
 
+.userimg {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente ao centro (opcional) */
+}
+
+.logo {
+    width: 600px;
+    height: 120px;
+    position: relative;
+    left: 55%; 
+}
 
 .user{
     width: 45%;
     display: flex;
-    color:white;
+    color:#333;
     margin-left: 10px ;
-
 }
 
 .nome{
@@ -29,11 +35,13 @@ header{
 }
 
 body {
-    font-family: Courier;
-    background-color: #001962;}
+    font-family: "Montserrat";
+    background-color: #001962;
+    margin: 0;
+}
 
 h1 {
-    font-family: "Helvetica";
+    font-family: "Montserrat";
     color: rgb(72, 155, 238);
     text-align: center;
 }
@@ -50,7 +58,7 @@ p {
     margin: auto;
     padding: auto;
     border-radius: 50px;
-    width: 530px;
+    width: 700px;
 }
 
 .bot {
@@ -61,7 +69,7 @@ p {
     font-size: 18px;
     border-radius: 50px;
     cursor: pointer;
-    font-family: Helvetica;
+    font-family: "Montserrat";
     margin: 20px 10px;
 }
 

@@ -1,26 +1,34 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 header{
     width: 100%;
-    height: 60px;
-    background-color: #052a97 ;
+    height: 120px;
+    background-color: #E6EDFF ;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    color: white;
+    color: #333;
+    font-family: "Montserrat";
 }
-.tiltle{
+
+.userimg {
     display: flex;
-    width: 55%;
+    align-items: center; /* Alinhar verticalmente ao centro (opcional) */
     right: 20px;
+}
+
+.logo {
+    width: 600px;
+    height: 120px;
+    position: relative;
+    left: 55%; 
 }
 
 .user{
     width: 45%;
     display: flex;
-    color:white;
-    margin-left: 10px ;
-
+    color:#333;
+    margin-left: 15px ;
 }
 
 .nome{
@@ -28,20 +36,20 @@ header{
 }
 
 body {
-    font-family: Courier;
+    font-family: "Montserrat";
     background-color: #001962;
     margin: 0;
 }
 
 h1 {
-    font-family: "Helvetica";
+    font-family: "Montserrat";
     color: rgb(72, 155, 238);
     text-align: center;
     margin: auto;
 }
 
 h3 {
-	font-family: "Helvetica";
+	font-family: "Montserrat";
     color: rgb(72, 155, 238);
     text-align: left;
 }
@@ -67,7 +75,7 @@ p {
 .titulos{
 	text-align: center;
     color: rgb(72, 155, 238);
-    margin: 40px;
+    margin: 30px;
     padding: auto;
 }
   
@@ -76,10 +84,10 @@ p {
     color: #ffffff; 
     border: none; 
     padding: 10px 20px; 
-    font-size: 18px; 
+    font-size: 16px; 
     border-radius: 5px; 
     cursor: pointer; 
-    font-family: "Helvetica";
+    font-family: "Montserrat";
     text-align: center;
 }
 
@@ -94,7 +102,7 @@ p {
     margin: auto;
     padding: auto;
     border-radius: 50px;
-    width: 530px;
+    width: 700px;
 }
 
 .bot {
@@ -105,7 +113,7 @@ p {
     font-size: 18px;
     border-radius: 50px;
     cursor: pointer;
-    font-family: Helvetica;
+    font-family: "Montserrat";
     margin: 20px 10px;
 }
 
@@ -129,7 +137,7 @@ p {
 }
 
 .palavras{
-	font-family: Georgia;
+	font-family: "Montserrat";
     align-items: left;
     font-size: 18px; 
     font-weight: 500;
@@ -152,14 +160,14 @@ input {
     width: 100%;
     outline: none;
     margin: 10px 0px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 textarea {
     background-color: rgb(185, 185, 185);
     color: white;
     font-size: 16px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Montserrat", Helvetica, sans-serif;
     border: none;
     padding: 10px;
     resize: vertical; 
@@ -175,7 +183,7 @@ select {
     background-color: rgb(185, 185, 185);
     color: white;
     font-size: 16px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Montserrat", Helvetica, sans-serif;
     border: none;
     padding: 10px;
     resize: vertical; 

@@ -12,13 +12,20 @@
     </head>
 
     <body>
+        
+        
         <header>
-            <div class="user"> 
-                <a href="./" onclick="Voltar()"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
-                <div class="nome"> {{name}} </div>
+
+            <div class="userimg">
+
+                <div class="user"> 
+                 <a href="./" onclick="Voltar()"><i class="fa-regular fa-user" style="color: #333;"></i></a> 
+                 <div class="nome"> {{name}} </div>
+                </div>
+
+                <img src="static/imagens/logofinal.png" alt="LogoSite" class="logo">
+            
             </div>
-            <div class="titulo2"><h1>ReclamECA</h1></div>
-    
         </header>
 
         <form method="post">
@@ -29,7 +36,7 @@
                     <div class="barra-vertical"></div>
                     <button class="bot" type="submit" name="botao" value="home">Home</button>
                     <div class="barra-vertical"></div>
-                    <button class="bot" type="submit" name="botao" value="resolvido">Minhas Reclamações</button>
+                    <button class="bot" type="submit" name="botao" value="minhas">Minhas Reclamações</button>
                 </div>
             </div>
 

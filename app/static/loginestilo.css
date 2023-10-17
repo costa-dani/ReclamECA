@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+.logo {
+	display: block; /* Exibe o elemento como bloco */
+	margin-top: 0; /* Adiciona margem superior à logo */
+	margin-right: 20px; /* Adiciona margem à direita da logo para alinhá-la à parte superior direita */
+	position: relative; /* Define a posição como relativa */
+	top: 0; /* Define o deslocamento vertical como zero para alinhar com o texto */
+	right: 0; /* Define o deslocamento horizontal como zero para alinhar com o texto */
+	width: 600px;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background: #f2e6e6;
+	background: #E6EDFF;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,7 +26,7 @@ body {
 }
 
 form {
-	background-color: #f2e6e6;
+	background-color: #E6EDFF;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -64,8 +74,6 @@ button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
-
-
 
 input {
 	background-color: #eee;

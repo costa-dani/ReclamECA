@@ -1,27 +1,37 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 header{
-    width: 100%;
-    height: 60px;
-    background-color: #052a97 ;
+    width: 110%;
+    height: 120px;
+    background-color: #E6EDFF ;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    color: white;
-}
-.titulo2{
-    display: flex;
-    width: 55%;
-    right: 20px;
+    color: #333;
+    font-family: "Montserrat";
+    padding: 0;
 }
 
+.userimg {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente ao centro (opcional) */
+    right: 20px;
+    margin: 0;
+    width: auto;
+}
+
+.logo {
+    width: 600px;
+    height: 120px;
+    position: relative;
+    left: 55%; 
+}
 
 .user{
     width: 45%;
     display: flex;
-    color:white;
+    color:#333;
     margin-left: 10px ;
-
 }
 
 .nome{
@@ -31,10 +41,11 @@ header{
 body {
     font-family: Courier;
     background-color: #001962;
+    margin: 0;
 }
 
 h2 {
-    font-family: "Helvetica";
+    font-family: "Montserrat";
     color: rgb(72, 155, 238);
     text-align: center;
 }
@@ -48,12 +59,13 @@ p {
     background-color: #dddddd;
     text-align: center;
     color: rgb(72, 155, 238);
-    margin: auto;
+    margin: 120px 32.7%;
     padding: 20px 0px 10px 0px;
-    border-radius: 50px;
+    border-radius: 30px;
     width: 500px;
-    font-family: Courier;
+    font-family: "Montserrat";
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .bot {
@@ -61,10 +73,10 @@ p {
     color: #ffffff;
     border: none;
     padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 50px;
+    font-size: 17px;
+    border-radius: 30px;
     cursor: pointer;
-    font-family: Helvetica;
+    font-family: "Montserrat";
     margin: 20px 10px;
 }
 

@@ -2,16 +2,15 @@ from app import app
 from flask import Flask, render_template, request, redirect, flash
 from app.models import *
 
-
-
 app.secret_key = "trabalhinho"
 @app.route("/", methods = ["POST", "GET"])
 def hello():
     
     if request.method == 'POST':
-        escolha = request.form.get("botao")
-        if escolha == "irsignup":
 
+        escolha = request.form.get("botao")
+
+        if escolha == "irsignup":
             return redirect("/signup")
         
         elif escolha == "login":
@@ -55,8 +54,7 @@ def cadastro():
            
             return redirect("/")
     
-        elif escolha2 == "irlogin":
-            
+        elif escolha2 == "irlogin":            
             return redirect("/")
 
     return render_template("cadastro.html")
@@ -69,16 +67,13 @@ def home():
         escolha3 = request.form.get("botao")
 
         if escolha3 == "home":
-
             return redirect("/home")
         
         elif escolha3 == "reclamar":
-
             return redirect("/reclamacao")
         
-        elif escolha3 == "resolvido":
-
-            return redirect("/resolvidas")
+        elif escolha3 == "minhas":
+            return redirect("/minhas")
 
     return render_template("home.html", post = l, name = u["nome"])
 
@@ -105,16 +100,13 @@ def reclamacao():
             return redirect("/sucesso")
         
         elif escolha4 == "home":
-
             return redirect("/home")
         
         elif escolha4 == "reclamar":
-
             return redirect("/reclamacao")
         
-        elif escolha4 == "resolvido":
-
-            return redirect("/resolvidas")
+        elif escolha4 == "minhas":
+            return redirect("/minhas")
 
     return render_template("reclamacao.html", name = u["nome"])
 
@@ -126,32 +118,28 @@ def sucesso():
         escolha5 = request.form.get("botao")
 
         if escolha5 == "outrarec":
-
             return redirect("/reclamacao")
         
         elif escolha5 == "voltarhome":
-
             return redirect("/home")
 
     return render_template("sucesso.html", name = u["nome"])
 
 
-@app.route("/resolvidas", methods = ["POST", "GET"])
+@app.route("/minhas", methods = ["POST", "GET"])
 def resolvidas():
     i = mostrar(1, u=u)
     if request.method == 'POST':
+
         escolha4 = request.form.get("botao")
 
         if escolha4 == "home":
-
             return redirect("/home")
         
         elif escolha4 == "reclamar":
-
             return redirect("/reclamacao")
         
-        elif escolha4 == "resolvido":
+        elif escolha4 == "minhas":
+            return redirect("/minhas")
 
-            return redirect("/resolvidas")
-
-    return render_template("resolvidas.html",post = i, name = u["nome"])
+    return render_template("minhas.html",post = i, name = u["nome"])
