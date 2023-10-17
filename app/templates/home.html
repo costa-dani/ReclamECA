@@ -2,31 +2,70 @@
     <head>
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="static/homestilo.css">
+        <script src="https://kit.fontawesome.com/649e88a597.js" crossorigin="anonymous"></script>
     </head>
-    
+
     <body>
+        <header>
+            <div class="user"> 
+                <a href="#"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
+                <div class="nome"> {{name}} </div>
+            </div>
+            <div class="titulo2"><h1>ReclamECA</h1></div>
+    
+        </header>
 
         <form method="post">
 
-        <div class="barradetres">
-            <div class="header">
-                <button class="bot" type="submit" name="botao" value="reclamar">Reclame aqui</button>
-                <div class="barra-vertical"></div>
-                <button class="bot" type="submit" name="botao" value="home">Home</button>
-                <div class="barra-vertical"></div>
-                <button class="bot" type="submit" name="botao" value="resolvido">Resolvido</button>
+            <div class="barradetres">
+                <div class="header">
+                    <button class="bot" type="submit" name="botao" value="reclamar">Reclame aqui</button>
+                    <div class="barra-vertical"></div>
+                    <button class="bot" type="submit" name="botao" value="home">Home</button>
+                    <div class="barra-vertical"></div>
+                    <button class="bot" type="submit" name="botao" value="resolvido">Resolvido</button>
+                </div>
             </div>
-        </div>
-        {% for i in post %}
-        <div class="reclamacoes">
-            <div class="titulo">
-                <h2> {{i['local']}} </h2>
-            </div>
-            <hr>
-            <p class="texto">{{  i['corpo']  }}</p>
-        </div>
-        {% endfor %}
+
+            {% for i in post %}
+            <ul class="post">
+                <div class="new-post">
+                    <div class="infoUser">
+                        <div class="imgUser"></div>
+
+                        <div class="nameAndHour">
+                            <strong>{{ i['nome'] }}</strong>
+                            <div>21h</div>
+                        </div>
+                    </div>
+                    <div class="assunto"> {{i['local']}}</div>
+                    <hr>
+                    <p>{{i['corpo']}}</p>
+
+                </div>
+            </ul>
+            {% endfor %}
 
         </form>
+
+
+
+
+
+
+                <!--
+                {% for i in post %}
+                <div class="reclamacoes">
+                    <div class="titulo">
+                        <h2> {{i['local']}} </h2>
+                    </div>
+                    <hr>
+                    <p class="texto">{{  i['corpo']  }}</p>
+                </div>
+                {% endfor %}
+
+                </form>
+                -->
+
         </body>
 </html>

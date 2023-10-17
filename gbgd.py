@@ -1,4 +1,7 @@
-l = [{"nome": "caio"}, {"nome": "pedro"}, {"nome": "guga"}]
-p = [1,2,3,4]
-l.reverse()
-print(l)
+def test():
+    x= 2+2
+    return True, "deu errado familia"
+
+y, z= test()
+print(y)
+print(z)

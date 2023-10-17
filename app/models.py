@@ -30,9 +30,12 @@ class User:
         if es != None:
             if es['password'] == self.password:
                 c.close()
-                return True
+                return True,''
+            else:
+                msg = "Senha invalida"
+                return False, msg
         c.close()
-        return False
+        return False, 'DRE invalido'
 
 
 class Post():

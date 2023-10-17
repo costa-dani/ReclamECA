@@ -1,6 +1,7 @@
 from app import app
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash
 from app.models import *
+
 
 
 app.secret_key = "trabalhinho"
@@ -19,7 +20,7 @@ def hello():
             password = request.form.get("password")
             email = request.form.get("email")
             use = User(dre=dre, password=password, nome = nome, email=email)
-            aut = use.autenticar()
+            aut, msg = use.autenticar()
             if aut:
                 c = init_client()
                 db = c["databases"]
@@ -30,6 +31,7 @@ def hello():
 
                 return redirect("/home")
             else:
+                flash(msg)
                 #enviar mensagem de dados errados
                 return redirect("/")
 
@@ -76,9 +78,9 @@ def home():
         
         elif escolha3 == "resolvido":
 
-            return render_template("resolvidas.html")
+            return redirect("/resolvidas")
 
-    return render_template("home.html", post = l)
+    return render_template("home.html", post = l, name = u["nome"])
 
 @app.route("/reclamacao", methods = ["POST", "GET"])
 def reclamacao():
@@ -114,7 +116,7 @@ def reclamacao():
 
             return redirect("/resolvidas")
 
-    return render_template("reclamacao.html")
+    return render_template("reclamacao.html", name = u["nome"])
 
 @app.route("/sucesso", methods = ["POST", "GET"])
 def sucesso():
@@ -131,10 +133,25 @@ def sucesso():
 
             return redirect("/home")
 
-    return render_template("sucesso.html")
+    return render_template("sucesso.html", name = u["nome"])
 
 
 @app.route("/resolvidas", methods = ["POST", "GET"])
 def resolvidas():
+    if request.method == 'POST':
+        
+        escolha4 = request.form.get("botao")
+        
+        if escolha4 == "home":
 
-    return render_template("resolvidas.html")
+            return redirect("/home")
+        
+        elif escolha4 == "reclamar":
+
+            return redirect("/reclamacao")
+        
+        elif escolha4 == "resolvido":
+
+            return redirect("/resolvidas")
+
+    return render_template("resolvidas.html", name = u["nome"])

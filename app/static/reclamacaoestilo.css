@@ -1,8 +1,37 @@
 @charset "UTF-8";
 
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #052a97 ;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.tiltle{
+    display: flex;
+    width: 55%;
+    right: 20px;
+}
+
+.user{
+    width: 45%;
+    display: flex;
+    color:white;
+    margin-left: 10px ;
+
+}
+
+.nome{
+    margin-left: 10px;
+}
+
 body {
     font-family: Courier;
-    background-color: #001962;}
+    background-color: #001962;
+    margin: 0;
+}
 
 h1 {
     font-family: "Helvetica";
