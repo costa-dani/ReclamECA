@@ -1,4 +1,3 @@
-# trabalhoLP
 Trabalho do curso de Linguagens de Programação
 
 Integrantes:
