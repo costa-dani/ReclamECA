@@ -1,6 +1,8 @@
 import pymongo
 import smtplib
 import email.message
+from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 
 def init_client():
     client = pymongo.MongoClient("localhost", 27017)
@@ -17,7 +19,8 @@ class User:
         c = init_client()
         db = c["databases"]
         usuarios = db["usuarios"]
-        u = {"nome" :  self.nome, "dre" : self.dre, "email" : self.email, "password": self.password}
+        hash =  generate_password_hash(self.password)
+        u = {"nome" :  self.nome, "dre" : self.dre, "email" : self.email, "password": hash}
         usuarios.insert_one(u)
         c.close()
     
@@ -28,7 +31,8 @@ class User:
         data = {'dre' : self.dre}
         es = usuarios.find_one(data)
         if es != None:
-            if es['password'] == self.password:
+            check = check_password_hash(es['password'], self.password) 
+            if check:
                 c.close()
                 return True,''
             else:
@@ -48,7 +52,9 @@ class Post():
         c = init_client()
         db= c["databases"]
         post = db["post"]
-        p = {"local" : self.local, "corpo" : self.corpo, "nome" : self.nome}
+        data = datetime.now()
+        data_formatada = data.strftime("%d/%m/%Y, %H:%M")
+        p = {"local" : self.local, "corpo" : self.corpo, "nome" : self.nome, "hora": data_formatada}
         post.insert_one(p)
         c.close()
     

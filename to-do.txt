@@ -2,8 +2,8 @@ To-do:
 
 - criar um alert com avisos pra ele nao escrever merda colosal tipo: " o bebedouro ta fraquinho"
 
-- colocar o nome na reclamacao, a ideia e deixar parecida com um feed
-- salvar a senha com criptografica no db
+
+
 - colocar botao de confirmar na reclamacao
 - ver oq faremos com o resolvido (trocar por minhas reclamacoes ?)
 - dentro de minhas reclamacoes ter um botao de apagar ou marcar como resolvido suas reclamacoes ?
@@ -14,3 +14,5 @@ To-do:
 done:
 
 - alert quando erram o email ou a senha no login
+- salvar a senha de forma segura no db
+- colocar o nome na reclamacao, a ideia e deixar parecida com um feed
