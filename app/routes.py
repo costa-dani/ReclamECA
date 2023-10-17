@@ -138,10 +138,10 @@ def sucesso():
 
 @app.route("/resolvidas", methods = ["POST", "GET"])
 def resolvidas():
+    i = mostrar(1, u=u)
     if request.method == 'POST':
-        
         escolha4 = request.form.get("botao")
-        
+
         if escolha4 == "home":
 
             return redirect("/home")
@@ -154,4 +154,4 @@ def resolvidas():
 
             return redirect("/resolvidas")
 
-    return render_template("resolvidas.html", name = u["nome"])
+    return render_template("resolvidas.html",post = i, name = u["nome"])

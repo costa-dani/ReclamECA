@@ -83,3 +83,39 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+.post{
+    display: flex;
+    margin: 20px;
+    color: #5e5a5e;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: #dddddd;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: none;
+}
+
+.new-post{
+    margin: 10px;
+}
+
+.imgUser{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #23A0FF;
+}
+.infoUser{
+    display: flex;
+    align-items: center;
+}
+
+.nameAndHour{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.assunto{
+    margin-top: 10px;
+}

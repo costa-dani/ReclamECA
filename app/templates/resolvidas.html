@@ -3,13 +3,19 @@
         <title>Resolvido</title>
         <link rel="stylesheet" type="text/css" href="static/resolvidasestilo.css">
         <script src="https://kit.fontawesome.com/649e88a597.js" crossorigin="anonymous"></script>
+        <script>
+            function Voltar()
+            {
+                alert("Você será redirecionado para o login!");
+            }
+            </script>
     </head>
     
     <body>
 
         <header>
             <div class="user"> 
-                <a href="#"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
+                <a href="./" onclick="Voltar()"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
                 <div class="nome"> {{name}} </div>
             </div>
             <div class="titulo2"><h1>ReclamECA</h1></div>
@@ -24,9 +30,28 @@
                 <div class="barra-vertical"></div>
                 <button class="bot" type="submit" name="botao" value="home">Home</button>
                 <div class="barra-vertical"></div>
-                <button class="bot" type="submit" name="botao" value="resolvido">Resolvido</button>
+                <button class="bot" type="submit" name="botao" value="resolvido">Minhas Reclamações</button>
             </div>
         </div>
+
+        {% for i in post %}
+        <ul class="post">
+            <div class="new-post">
+                <div class="infoUser">
+                    <div class="imgUser"></div>
+
+                    <div class="nameAndHour">
+                        <strong>{{ i['nome'] }}</strong>
+                        <div>{{i['hora']}}</div>
+                    </div>
+                </div>
+                <div class="assunto"> {{i['local']}}</div>
+                <hr>
+                <p>{{i['corpo']}}</p>
+
+            </div>
+        </ul>
+        {% endfor %}
         </form>
         </body>
 </html>

@@ -3,19 +3,32 @@
         <title>Reclamação</title>
         <link rel="stylesheet" type="text/css" href="static/reclamacaoestilo.css">
         <script src="https://kit.fontawesome.com/649e88a597.js" crossorigin="anonymous"></script>
+        <script>
+        function Voltar()
+        {
+            alert("Você será redirecionado para o login!");
+        }
+        </script>
+
+        <script>
+        function funcao1()
+        {
+            alert("Você está enviando um email com a sua reclamação e com seus dados de confirmação para o responsável do local!!!");
+        }
+        </script>
+
     </head>
     
     <body>
 
         <header>
             <div class="user"> 
-                <a href="#"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
+                <a href="./" onclick="Voltar()"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
                 <div class="nome"> {{name}} </div>
             </div>
             <div class="title"><h1>ReclamECA</h1></div>
-    
-        </header>
 
+        </header>
         <form method="post">
 
         <div class="barradetres">
@@ -24,7 +37,7 @@
                 <div class="barra-vertical"></div>
                 <button class="bot" type="submit" name="botao" value="home">Home</button>
                 <div class="barra-vertical"></div>
-                <button class="bot" type="submit" name="botao" value="resolvido">Resolvido</button>
+                <button class="bot" type="submit" name="botao" value="resolvido">Minhas Reclamações</button>
             </div>
         </div>
 
@@ -71,8 +84,9 @@
 
         <textarea rows="5" cols="30" placeholder="Digite aqui..." name = "corpo"></textarea>
 
-        <p><button class="botreg" type="submit" name="botao" value="reclamou">Enviar</button></p>
+        <p><button onclick="funcao1()" class="botreg" type="submit" name="botao" value="reclamou">Enviar</button></p>
     
     <div>
     </body>
+        
 </html>

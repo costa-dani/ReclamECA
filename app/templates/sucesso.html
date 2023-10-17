@@ -3,13 +3,19 @@
         <title>Sucesso</title>
         <link rel="stylesheet" type="text/css" href="static/sucesso.css">
         <script src="https://kit.fontawesome.com/649e88a597.js" crossorigin="anonymous"></script>
+        <script>
+            function Voltar()
+            {
+                alert("Você será redirecionado para o login!");
+            }
+            </script>
     </head>
     
     <body>
 
         <header>
             <div class="user"> 
-                <a href="#"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
+                <a href="./" onclick="Voltar()"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a> 
                 <div class="nome"> {{name}} </div>
             </div>
             <div class="titulo2"><h1>ReclamECA</h1></div>

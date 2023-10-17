@@ -58,16 +58,29 @@ class Post():
         post.insert_one(p)
         c.close()
     
-def mostrar():
-    c = init_client()
-    db = c["databases"]
-    usuarios = db["post"]
-    p = usuarios.find()
-    l=[]
-    for i in p:
-        l.append(i)
-    l.reverse()
-    return l 
+def mostrar(mr = 0, u = ''):
+    if mr != 0:
+        c = init_client()
+        db = c["databases"]
+        usuarios = db["post"]
+        data = {"nome" : u['nome']}
+        p = usuarios.find(data)
+        l =[]
+        for i in p:
+            l.append(i)
+        l.reverse()
+        return l 
+
+    else:
+        c = init_client()
+        db = c["databases"]
+        usuarios = db["post"]
+        p = usuarios.find()
+        l=[]
+        for i in p:
+            l.append(i)
+        l.reverse()
+        return l 
 
 def enviar_email(destino,nome, lugar, corpo, dre,emaili):  
     corpo_email = f"""
