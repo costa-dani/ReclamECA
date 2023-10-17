@@ -5,14 +5,25 @@
 }
 
 body {
-	background: #f6f5f7;
+	background: #f2e6e6;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
+	
+}
+
+form {
+	background-color: #f2e6e6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100vh;
+	text-align: center;
 }
 
 h1 {
@@ -54,16 +65,7 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
-form {
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
-}
+
 
 input {
 	background-color: #eee;
@@ -81,9 +83,9 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 900px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 530px;
 }
 
 .form-container {
